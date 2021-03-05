@@ -21,7 +21,7 @@
             @foreach ($schoolposts as $schoolpost)
               <div class="row mb-4 pb-4 border-bottom">
                 <div class="col-4">
-                  <a href="#">
+                  <a href="/schoolpost/{{$schoolpost->id}}">
                     <img src="{{asset($schoolpost->image_top)}}" alt="" style="width:100%;">
                   </a>
                 </div>
@@ -41,7 +41,7 @@
                       </div>
                     </div>
                   </div>
-                  <a href="" class="btn btn-primary btn-lg">スクール詳細はこちら</a>
+                  <a href="/schoolpost/{{$schoolpost->id}}" class="btn btn-primary btn-lg">スクール詳細はこちら</a>
                 </div>
               </div>
             @endforeach

@@ -16,4 +16,14 @@ class Schoolpost extends Model
       $schoolposts = Schoolpost::all();
       return $schoolposts;
     }
+
+    /**
+     * 対象スクールデータを取得
+
+    public static function find($id)
+    {
+      $schoolpost = Schoolpost::find(id);
+      return $schoolpost;
+    }
+    */
 }

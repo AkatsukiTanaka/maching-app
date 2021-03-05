@@ -13,6 +13,7 @@
 
 Route::get('/', 'UserController@top')->name('user.top');
 Route::get('/schoolpost/index', 'SchoolpostController@index')->name('schoolpost.index');
+Route::get('/schoolpost/{id}', 'SchoolpostController@detail')->name('schoolpost.detail');
 
 Route::get('/user/signin', 'UserController@signin')->name('user.signin');
 Route::post('/user/login', 'UserController@login')->name('user.login');
