@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'UserController@top')->name('user.top');
+Route::get('/user/signin', 'UserController@signin')->name('user.signin');
+Route::post('/user/login', 'UserController@login')->name('user.login');
+
+Route::group(['middleware' => 'auth'], function() {
+  Route::post('/user/logout', 'UserController@logout')->name('user.logout');
+})
