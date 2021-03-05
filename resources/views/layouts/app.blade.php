@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="Navber">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">スクール検索 <span class="sr-only">(現位置)</span></a>
+          <a class="nav-link" href="{{route('schoolpost.index')}}">スクール検索 <span class="sr-only">(現位置)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">プロ</a>
