@@ -13,7 +13,13 @@ class UserController extends Controller
    */
   public function top()
   {
-    return view('user.top');
+    if (Auth::check()) {
+      $user = Auth::user();
+      session()->flash('flash_message', 'login済み');
+      return view('user/top', ['user' => $user]);
+    }
+    session()->flash('error_message', 'no login');
+    return view('user/top');
   }
 
   /**
